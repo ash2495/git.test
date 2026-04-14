@@ -15,3 +15,5 @@ print(obj.my_method())  # Output: This is a function.
 global_variable = "I am a global variable."
 setattr(obj, 'global_var', global_variable)
 print(obj.global_var)  # Output: I am a global variable.
+setattr(obj, 'number', 42)
+print(obj.number)  # Output: 42
