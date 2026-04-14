@@ -17,3 +17,14 @@ setattr(obj, 'global_var', global_variable)
 print(obj.global_var)  # Output: I am a global variable.
 setattr(obj, 'number', 42)
 print(obj.number)  # Output: 42
+while True:
+    user_input = input("Enter a new value for the 'number' attribute (or 'exit' to quit): ")
+    if user_input.lower() == 'exit':
+        break
+    try:
+        new_value = int(user_input)
+        setattr(obj, 'number', new_value)
+        print(f"Updated 'number' attribute: {obj.number}")
+    except ValueError:
+        print("Please enter a valid integer or 'exit'.")
+        
